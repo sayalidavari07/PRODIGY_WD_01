@@ -1,0 +1,420 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    color: #222;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: transparent;
+
+    transition: 0.4s ease;
+
+    z-index: 1000;
+}
+
+
+/* Navbar after scrolling */
+
+.navbar.scrolled {
+    background: #15152b;
+
+    padding: 14px 8%;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+
+/* Hover effect */
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+
+/* Underline hover effect */
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffd166;
+
+    left: 0;
+    bottom: -7px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #24105f,
+            #5b21b6,
+            #2563eb
+        );
+
+    color: white;
+}
+
+
+.hero-content {
+    max-width: 700px;
+}
+
+
+.small-title {
+    color: #ffd166;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: 65px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #ffd166;
+}
+
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #ffd166;
+
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+    background: white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+
+    min-height: 70vh;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.section h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+    color: #24105f;
+}
+
+
+.section p {
+
+    max-width: 700px;
+
+    line-height: 1.7;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    background: white;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+
+    background: #f1f3ff;
+}
+
+
+.cards {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+    width: 100%;
+
+    max-width: 1000px;
+}
+
+
+.card {
+
+    flex: 1;
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+.icon {
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+.card h3 {
+
+    color: #24105f;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    background:
+        linear-gradient(
+            135deg,
+            #24105f,
+            #2563eb
+        );
+
+    color: white;
+}
+
+
+.contact h2 {
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+
+        padding: 150px 7% 80px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+
+    .cards {
+
+        flex-direction: column;
+    }
+
+
+    .card {
+
+        width: 100%;
+    }
+
+}
